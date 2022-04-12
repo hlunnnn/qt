@@ -1,0 +1,30 @@
+console.log(document.getElementsByTagName('tbody')[0])
+
+console.log(document)
+
+
+console.log(document.getElementsByTagName('tbody')[0].getElementsByTagName('tr')[0].getElementsByTagName('td')[0])
+document.getElementsByTagName('tbody')[0].getElementsByTagName('tr')[0].getElementsByTagName('td')[0].getElementsByTagName('input')[0].click()
+document.getElementsByTagName('tbody')[0].getElementsByTagName('tr')[0].children;
+
+
+用户列表批量选择全部：
+trlist = document.getElementsByTagName('tbody')[0].getElementsByTagName('tr')
+len =trlist.length
+for(var i = 0;i<len;i++){
+	trlist[i].getElementsByTagName('td')[0].firstChild.click()
+}
+
+
+批量添加职位管理者
+dd= document.getElementById('duserTree0')
+len =dd.children.length
+for(var i=0;i<len;i++){
+    dd.children[i].getElementsByTagName('input')[0].click()
+}
+
+dd= document.getElementById('duserTree0')
+for(var i=0;i<1759;i++){
+    dd.children[i].getElementsByTagName('input')[0].click()
+}
+

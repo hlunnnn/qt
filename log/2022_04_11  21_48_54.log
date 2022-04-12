@@ -1,0 +1,22 @@
+2022-04-11 21:48:56,801 INFO [root] [base.py (__init__:14] - [base]: 正在获取初始化driver对象：<selenium.webdriver.chrome.webdriver.WebDriver (session="2a652a1268b524366658349db2eefa64")>
+2022-04-11 21:48:57,373 INFO [root] [page_login.py (email_login:25] - [page_Login] 通过邮箱登录:账号:hl022501@dayee.com 密码:a1234567
+2022-04-11 21:48:57,373 INFO [root] [base.py (base_click:29] - [base]: 开始对:('xpath', "//span[text()='登录']")元素实行点击事件
+2022-04-11 21:48:57,373 INFO [root] [base.py (base_find:19] - [base]: 正在定位:('xpath', "//span[text()='登录']")元素
+2022-04-11 21:48:58,058 INFO [root] [base.py (base_click:34] - [base]: 对('xpath', "//span[text()='登录']")元素进行点击
+2022-04-11 21:48:59,059 INFO [root] [base.py (base_click:29] - [base]: 开始对:('xpath', "//div[@class='wx-scan-login']/*[name()='svg']")元素实行点击事件
+2022-04-11 21:48:59,059 INFO [root] [base.py (base_find:19] - [base]: 正在定位:('xpath', "//div[@class='wx-scan-login']/*[name()='svg']")元素
+2022-04-11 21:48:59,108 INFO [root] [base.py (base_click:34] - [base]: 对('xpath', "//div[@class='wx-scan-login']/*[name()='svg']")元素进行点击
+2022-04-11 21:48:59,109 INFO [root] [base.py (base_sendkeys:48] - [base]: 正在对:('xpath', "//input[@placeholder='请输入邮箱']")元素输入:hl022501@dayee.com
+2022-04-11 21:48:59,109 INFO [root] [base.py (base_find:19] - [base]: 正在定位:('xpath', "//input[@placeholder='请输入邮箱']")元素
+2022-04-11 21:48:59,278 INFO [root] [base.py (base_sendkeys:48] - [base]: 正在对:('xpath', "//input[@placeholder='请输入密码']")元素输入:a1234567
+2022-04-11 21:48:59,278 INFO [root] [base.py (base_find:19] - [base]: 正在定位:('xpath', "//input[@placeholder='请输入密码']")元素
+2022-04-11 21:48:59,377 INFO [root] [base.py (base_sendkeys:48] - [base]: 正在对:('xpath', "//input[@placeholder='请输入验证码']")元素输入:9999
+2022-04-11 21:48:59,377 INFO [root] [base.py (base_find:19] - [base]: 正在定位:('xpath', "//input[@placeholder='请输入验证码']")元素
+2022-04-11 21:48:59,443 INFO [root] [base.py (base_click:29] - [base]: 开始对:('xpath', "//button[text()='登录']")元素实行点击事件
+2022-04-11 21:48:59,443 INFO [root] [base.py (base_find:19] - [base]: 正在定位:('xpath', "//button[text()='登录']")元素
+2022-04-11 21:48:59,485 INFO [root] [base.py (base_click:34] - [base]: 对('xpath', "//button[text()='登录']")元素进行点击
+2022-04-11 21:48:59,485 INFO [root] [page_login.py (islogin:66] - [page_Login] 判断是否登录成功
+2022-04-11 21:48:59,485 INFO [root] [base.py (base_find:19] - [base]: 正在定位:('class name', 'user-box')元素
+2022-04-11 21:49:00,003 INFO [root] [base.py (base_click:29] - [base]: 开始对:('class name', 'logout-btn')元素实行点击事件
+2022-04-11 21:49:00,003 INFO [root] [base.py (base_find:19] - [base]: 正在定位:('class name', 'logout-btn')元素
+2022-04-11 21:49:00,036 INFO [root] [base.py (base_click:34] - [base]: 对('class name', 'logout-btn')元素进行点击
