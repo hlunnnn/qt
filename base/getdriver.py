@@ -4,14 +4,13 @@ import page
 
 
 class GetDriver:
-    __driver=None
+    driver=None
 
     @classmethod
     def get_driver(cls):
         if cls.driver is None:
             cls.driver=webdriver.Chrome()
             cls.driver.maximize_window()
-            # cls.driver.implicitly_wait(5)
         return cls.driver
 
 

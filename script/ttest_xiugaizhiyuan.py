@@ -1,4 +1,3 @@
-import time
 import unittest
 
 from parameterized import parameterized
@@ -9,7 +8,7 @@ from page.page_ats import PageATS
 from page.page_login import PageLogin
 from page.page_position_list import PagePositionList
 from base.get_logger import GetLogger
-from tool.read_file import get_txt_data
+from common.read_file import get_txt_data
 
 log = GetLogger().get_logger()
 

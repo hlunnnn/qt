@@ -1,6 +1,5 @@
 import time
 import unittest
-from unittest import skip
 
 from parameterized import parameterized
 
@@ -10,7 +9,7 @@ from page.page_ats import PageATS
 from page.page_login import PageLogin
 from page.page_position_list import PagePositionList
 from base.get_logger import GetLogger
-from tool.read_file import get_txt_data
+from common.read_file import get_txt_data
 
 log = GetLogger().get_logger()
 email = get_txt_data("account.txt")[0][0]  # 简历中邮箱  取注册账号的邮箱

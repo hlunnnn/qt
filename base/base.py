@@ -1,29 +1,25 @@
 import time
-
-from selenium import webdriver
+from selenium.common.exceptions import TimeoutException
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.wait import WebDriverWait
 
-from base.get_logger import GetLogger
+from base.getrootdirectory import GetRootDirectory
 
-log = GetLogger().get_logger()
 
 class Base:
 
     def __init__(self, driver):
         self.driver = driver
-        self.driver = webdriver.Chrome()
 
 
-
-    def base_find_element(self, loc, timeout=5, poll=0.5):
+    def base_find_element(self, loc, timeout=2, poll=0.5):
         try:
             return WebDriverWait(self.driver, timeout=timeout, poll_frequency=poll).until(
                 lambda x: x.find_element(*loc))
-        except Exception as e:
-            print(e)
-            raise e
+        except TimeoutException as e:
+            self.base_get_screenshot()
+            print("查找元素超时了")
 
     def base_click(self, loc):
         # 点击
@@ -31,7 +27,7 @@ class Base:
 
     def base_send_keys(self, loc, value):
 
-        self.base_find_element(loc).sendkeys(value)
+        self.base_find_element(loc).send_keys(value)
 
     def base_get_handle(self):
         #获取当前页的handle
@@ -45,8 +41,15 @@ class Base:
         #返回元素的文本
         return  self.base_find_element(loc).text
 
-    def base_get_screenshot(self,filename):
-        self.driver.get_screenshot_as_file("../image/{}.png".format(time.strftime("%m_%d %M_%H_%S")))
+    def base_get_screenshot(self):
+        self.driver.get_screenshot_as_file(GetRootDirectory.get_root_directory() +"/image/{}.png".format(time.strftime("%Y_%m_%d %H_%M_%S", time.localtime())))
+
+    def base_element_isexist(self,args):
+        try:
+            self.base_find_element(args)
+            return True
+        except:
+            return False
 
 
     #切换到最新的窗口

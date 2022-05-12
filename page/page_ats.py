@@ -13,7 +13,7 @@ class PageATS(Base):
 
     def ats_log(self, url, code, username, password):
         self.driver.get(url)
-        self.base_sendkeys(page.login_code, code)
+        self.base_send_keys(page.login_code, code)
         self.base_sendkeys(page.login_username, username)
         self.base_sendkeys(page.login_password, password)
         self.base_click(page.login_button)

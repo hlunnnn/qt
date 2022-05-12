@@ -5,7 +5,7 @@ import page
 from base.getdriver import GetDriver
 from page.page_login import PageLogin
 from base.get_logger import GetLogger
-from tool.read_file import get_txt_data
+from common.read_file import get_txt_data
 
 log = GetLogger().get_logger()
 get_data = get_txt_data("account.txt")

@@ -1,15 +1,27 @@
 import json
-
 import xlrd
+import yaml
+
+
+def read_yaml(filename):
+    """
+
+    :rtype: 字典
+    """
+    filepath = "../data/{}".format(filename)
+    with open(filepath, mode="r", encoding="utf-8") as f:
+        data = yaml.load(f, Loader=yaml.FullLoader)
+        return data
 
 
 def read_txt(filename):
     filepath = "../data/{}".format(filename)
-    with open(filepath,mode="r",encoding="utf-8") as f:
-       return f.readlines()
+    with open(filepath, mode="r", encoding="utf-8") as f:
+        return f.readlines()
+
 
 def get_txt_data(filename):
-    arr=[]
+    arr = []
     for data in read_txt(filename):
         # arr.append(tuple(data.strip().split("，")))
         arr.append(tuple(data.strip().split(",")))
@@ -17,11 +29,11 @@ def get_txt_data(filename):
 
 
 def read_json(filename):
-
-    filepath = "../data/"+filename
-    #获取文件流 并调用load
-    with open(filepath,"r",encoding="utf-8") as f:
+    filepath = "../data/" + filename
+    # 获取文件流 并调用load
+    with open(filepath, "r", encoding="utf-8") as f:
         return json.load(f)
+
 
 def read_excel(filename):
     xls = xlrd.open_workbook("../data/{}".format(filename))
@@ -32,18 +44,16 @@ def read_excel(filename):
     return list
 
 
-
 if __name__ == '__main__':
-    #读取txt文件返回列表
+    # 读取txt文件返回列表
     print(read_txt("account.txt"))
-    print("*"*50)
+    print("*" * 50)
     arr = []
     for data in read_txt("account.txt"):
         print(data)
         print(type(data))
         # arr.append(tuple(data.strip().split("，")))
         arr.append(tuple(data.strip().split(",")))
-
 
     print(arr[1:])
     print(arr[1:][0][0])
